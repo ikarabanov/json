@@ -5,7 +5,7 @@ import (
 	"io/ioutil"
 )
 
-func loadJSON(filePath string, data interface{}) (e error) {
+func LoadJSON(filePath string, data interface{}) (e error) {
 	fileData, err := ioutil.ReadFile(filePath)
 	if err != nil {
 		return err
@@ -16,7 +16,7 @@ func loadJSON(filePath string, data interface{}) (e error) {
 	}
 	return nil
 }
-func writeJSON(filePath string, data interface{}) (e error) {
+func WriteJSON(filePath string, data interface{}) (e error) {
 	fileData, err := json.Marshal(data)
 	if err != nil {
 		return err
